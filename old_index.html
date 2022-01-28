@@ -7,6 +7,7 @@
     <title>Wally</title>
     <link type="text/css" rel="stylesheet" href=./fonts/fonts.css></link>
     <link type="text/css" rel="stylesheet" href=./w_h.css></link>
+    <!--<script charset="utf-8" src="./ch.js"></script>-->
 </head>
 <body class="hmg">
     <header>
@@ -206,27 +207,7 @@
                 </div>
               </div>
               <a><span>Partnership</span></a>
-              <div class="drop">
-                <span>About us</span>
-                <div class="drop_down">
-                  <div>
-                    <ul  class="flx">
-                      <li>
-                        <a>ჩვენს შესახებ</a>
-                      </li>
-                      <li>
-                        <a>ჩვენი გუნდი</a>
-                      </li>
-                      <li>
-                        <a>სიახლეები</a>
-                      </li>
-                      <li>
-                        <a>წესები და პირობები</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <a><span>About Us</span></a>
               <a><span>Blog</span></a>
               <a><span>Contact</span></a>
               <a><span>ORDER CARD</span></a>
@@ -245,81 +226,6 @@
               </svg>
             </div>
           </nav>
-          <div class="menu" id="menu" style="display: none;">
-            <div>
-              <div class="close" id="close"><svg width="40" height="40" viewBox="0 0 40 40"><title>Close mobile navigation</title><path d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z" fill="#8898AA" fill-rule="evenodd"></path></svg></div>
-              <div class="prod_g">
-                <h2>Products</h2>
-                <ul  class="">
-                  <li>
-                    <div>
-                      <div class="ico1"></div>
-                    </div>
-                    <a>იდენტომატი</a>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="ico2"></div>
-                    </div>
-                    <a>ვოლი - ბარათი</a>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="ico3"></div>                       
-                    </div>
-                    <a>ფულადი გზავნილები</a>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="ico4"></div>                         
-                    </div>
-                    <a>სწრაფი ონლაინ სესხი</a>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="ico5"></div>                       
-                    </div>
-                    <a>კომუნალურები</a>
-                  </li>
-                  <li>
-                    <div>
-                      <div class="ico6"></div>                  
-                    </div>
-                    <a>შეთავაზებები</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="prod_g">
-                <h2>Partnership</h2>
-              </div>
-              <div class="prod_g">
-                <h2>About us</h2>
-                <ul  class="flx">
-                  <li>
-                    <a>ჩვენს შესახებ</a>
-                  </li>
-                  <li>
-                    <a>ჩვენი გუნდი</a>
-                  </li>
-                  <li>
-                    <a>სიახლეები</a>
-                  </li>
-                  <li>
-                    <a>წესები და პირობები</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="prod_g">
-                <h2>Blog</h2>
-              </div>
-              <div class="prod_g">
-                <h2>Contact</h2>
-              </div>
-              <div class="prod_g">
-                <h2>ORDER CARD</h2>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
           <div class="hm wback">
@@ -5272,7 +5178,6 @@
                 </div>
               </div>
             </section>
-            <script charset="utf-8" src="./fonts/wally.js"></script>
             <footer class="">
               <div>
                 <div>
@@ -5410,5 +5315,21 @@
         </div>
       </div>
     </main>
+    <script>
+      var elt = document.getElementsByClassName("drop")[0];
+      var el = document.getElementsByClassName("drop_down")[0];
+      elt.addEventListener("mouseover", addClass);
+      elt.addEventListener("mouseleave", removeClass);
+      function addClass() {
+        el.classList.add("down");
+        el.style.display = "block";
+        setTimeout(function(){el.style.opacity = 1},10);
+      }
+      function removeClass() {
+        el.classList.remove("down");
+        el.style.opacity = 0;
+        setTimeout(function(){el.style.display = "none"}, 100);
+      }
+    </script>
 </body>
 </html>
